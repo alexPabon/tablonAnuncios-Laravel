@@ -5,17 +5,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Aplicacion de gestion de motos Larabikes">
-
         <title>{{config('app.name')}} -@yield('titulo')</title>
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">    
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}" defer></script>    
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">    
+        <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         <!-- CSS de Bootstrap y Laravel -->
         <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('css/anuncios.css')}}">         
     </head>    
-    <body>    
+    <body class="bg-light">    
     
-@include('layouts.app')
+@include('auth.userMenu')
 @section('navegacion')
    <!-- PARTE SUPERIOR -->
    <ul class="nav nav-pills pos-f-t bg-dark py-2 px-5 ">
