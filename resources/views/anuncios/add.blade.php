@@ -17,12 +17,18 @@
             <textarea class="form-control" rows="7" id="inputColor" name="descripcion" placeholder="Maximo 500 caracteres" maxlength="500" >{{old('descripcion')}}</textarea>
         </div>
         <div class="form-group row">
-            <label for="inputImagen" class="col-sm-2 col-form-label">Imagen</label>
-            <input type="file" name="imagen" class="up form-control-file col-sm-10" id="inputImagen">
+            <figure class="row mt2 mb-2 col-10 offset-1">
+    			<img height=250 class="fotos" id="user-img" src="">
+			</figure>
+			<p id="error_img"></p>
+        </div>
+        <div class="form-group row">
+            <label for="user-img-file" class="btn btn-primary active">Cargar Imagen</label>
+            <input type="file" name="imagen" class="up form-control-file col-sm-10" id="user-img-file">
         </div>
         <div class="form-group row">
           <button type="submit" class="btn btn-success mx-2">Guardar</button>
-          <button type="reset" class="btn btn-secundary">Borrar</button>
+          <button type="reset" id="borrar" class="btn btn-secundary">Borrar</button>
         </div>
     </form>
 @endsection

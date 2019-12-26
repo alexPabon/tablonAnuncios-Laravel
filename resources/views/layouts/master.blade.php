@@ -9,7 +9,9 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">    
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>    
+        <script src="{{ asset('js/app.js') }}" defer></script> 
+        <script type="text/javascript" src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/cargarImagen.js')}}"></script>   
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">    
@@ -19,29 +21,23 @@
         <!-- CSS de Bootstrap y Laravel -->
         <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{asset('css/anuncios.css')}}">         
+        <link rel="stylesheet" type="text/css" href="{{asset('css/anuncios.css')}}"> 
+        <link rel="stylesheet" type="text/css" href="{{asset('css/cabecera.css')}}"> 
+        <link href="https://fonts.googleapis.com/css?family=Merienda+One&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Courgette|El+Messiri&display=swap" rel="stylesheet">       
     </head>    
     <body class="bg-light">    
     
-@include('auth.userMenu')
+@yield('cabecera')
 @section('navegacion')
    <!-- PARTE SUPERIOR -->
-   <ul class="nav nav-pills pos-f-t bg-dark py-2 px-5 ">
-       <li class="nav-item mr-2">
-           <a href="{{url('/')}}" class=" btn btn-primary ">Inicio</a>
-       </li>
-       <li class="nav-item mr-2">
-           <a href="{{route('anuncios.index')}}" class="btn btn-light">Listado de anuncios</a>
-       </li>
-        @if(!empty(Auth::user()))
-           <li class="nav-item mr-2">
-               <a href="{{route('anuncios.create')}}" class="btn btn-light">Publicar anuncio</a>
-           </li>
-           <li class="nav-item mr-2">
-               <a href="{{route('publicacion.lomio')}}" class="btn btn-light">Mis publicaciones</a>
-           </li>
-        @endif        
-   </ul>
+        @if(url()->current()!="http://venderdetodo.local")
+    	   <div class="fixed-top">@include('auth.userMenu')</div>
+    	   <div class="p-4 mt-3 bg-dark"></div>
+       @else
+           @include('auth.userMenu')
+           <div class="p-1 bg-dark"></div>
+       @endif
 @show
 <div class="container p-3 bg-light">	
     <!-- PARTE CENTRAL -->

@@ -3,10 +3,12 @@
 
     @section('contenido') 
         <div>
-			<p>Publicado: {{$anuncio->created_at}}</p>
-			<h3><b>{{$anuncio->titulo}}</b></h3>
-			<p><b>Precio: </b>{{$anuncio->precio}}€</p>
-			<p>{{$anuncio->descripcion}}</p>
+			<p>Ultima Actualizacion: {{$anuncio->updated_at}}</p>			
+			<h3><b>{{ucfirst($anuncio->titulo)}}</b></h3>
+			<p><b>Precio: </b>{{e($anuncio->precio)}}€</p>
+			{{-- Para escribir un texto con saltos de linea debe usar'{!! nl2br() !!}'
+				como en la siguiente instruccion --}}
+			<p>{!! nl2br(e($anuncio->descripcion)) !!}</p>			
 			<div>
     			@if($anuncio->imagen)   				
                     <figure class="row mt2 mb-2 col-10 offset-1">
@@ -18,9 +20,11 @@
     @endsection
     
     @section('opciones')    	
-    	@auth    		
-        	@includeif('anuncios.subView.linkEditar')
-    		@includeif('anuncios.subView.linkBorrar')        	
+    	@auth
+    		@if(Auth::user()->id===$anuncio->user_id || Auth::user()->email=='admin@bcn.cat')   		
+            	@includeif('anuncios.subView.linkEditar')
+        		@includeif('anuncios.subView.linkBorrar')
+    		@endif        	
     	@endauth    	        	
 	@endsection
 

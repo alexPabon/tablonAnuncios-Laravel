@@ -21,17 +21,25 @@
         @if(!empty($anuncio->imagen))
             <div class="form-group row">
                 <figure class="row mt2 mb-2 col-10 offset-1">
-        			<img height=250 class="fotos" src="{{asset(config('filesystems.anunciosImageDir').$anuncio->imagen)}}">
+        			<img height=250 class="fotos" id="user-img1" src="{{asset(config('filesystems.anunciosImageDir').$anuncio->imagen)}}">
     			</figure>
+    			<p id="error_img1"></p>
+            </div>
+        @else
+        	<div class="form-group row">
+                <figure class="row mt2 mb-2 col-10 offset-1">
+        			<img height=250 class="fotos" id="user-img1" src="">
+    			</figure>
+    			<p id="error_img1"></p>
             </div>
         @endif
         <div class="form-group row">
-            <label for="inputImagen" class="col-sm-2 col-form-label">Imagen</label>
-            <input type="file" name="imagen" class="up form-control-file col-sm-10" id="inputImagen">
+            <label for="user-img-file1" class="btn btn-primary active">Cambiar Imagen</label>
+            <input type="file" name="imagen" class="up form-control-file col-sm-10" id="user-img-file1">
         </div>
         <div class="form-group row">
           <button type="submit" class="btn btn-success mx-2">Guardar</button>
-          <button type="reset" class="btn btn-secundary">Borrar</button>
+          <button type="reset" class="btn btn-secundary" id="borrar1">Borrar</button>
         </div>
     </form>
 @endsection

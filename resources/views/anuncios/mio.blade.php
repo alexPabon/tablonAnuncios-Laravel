@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('titulo','Listado de mis anuncios')       
+@section('titulo','Mis anuncios')       
     	
 	@section('contenido')
 		@if($total>0)

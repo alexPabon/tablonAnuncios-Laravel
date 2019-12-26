@@ -26,7 +26,7 @@ class AnuncioController extends Controller
      */
     public function index()
     {
-        $anuncios = Anuncio::orderBy('id','DESC')->paginate(10);
+        $anuncios = Anuncio::orderBy('updated_at','DESC')->paginate(12);
         $total = Anuncio::count();
         
         return view('anuncios.list')->with(['anuncios'=>$anuncios,'total'=>$total]);

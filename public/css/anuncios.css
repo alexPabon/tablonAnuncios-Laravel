@@ -1,9 +1,32 @@
+*{
+	box-sizing: border-box;
+}
+
+.contGeneral{
+	padding: 5px;
+    background: #6ebdc5;
+    box-shadow: 0 0 5px 2px #2e656b;
+    display: flex;
+    min-width:260px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portada{
+	min-height: 80vh;
+}
+
+.contPadre{
+	background: #dde6f3;	
+	box-shadow: 0 0 4px black;
+	width:33%;
+	min-width: 189px;
+	margin:3px 1px;
+	border-radius:10px;
+}
+
 .contenedor{	
-	background: #eaedf1;
-	margin-bottom: 10px;
-	padding: 10px 15px;
-	box-shadow: inset 0 0 20px 2px #3590dc;
-	border-radius: 15px;
+	padding: 10px 15px;		
 }
 
 .contenido{	
@@ -22,16 +45,52 @@
 }
 
 .fotos{
+	border:solid 1px lightgray;	
 	border-radius: 10px;
 	max-width:400px;
 	min-width:200px;
 }
 
-.contenedor:hover{
+#user-img-file,
+#user-img-file1{
+	display:none;
+}
+
+.contPadre:hover{
 	background:#a4bce0;
 	box-shadow: inset 0 0 20px black;
 }
 .contenido:hover{	
-	color:#001ef3;
+	color:white;
 	text-decoration:none;
 }
+
+/* ************ scroll ***************  */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px lightgrey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #037bff; 
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6ebdc5;
+}
+
+@media only screen and (max-width: 375px) {
+	.contPadre{
+		width:100%;
+	}
+	}

@@ -1,0 +1,129 @@
+body{
+	padding: 0;
+	margin:0;
+}
+header{				
+	background-color: #45637b;
+	height: 100vh;
+	position: relative;	
+	display: inline-flex;
+	padding: 0;						
+}
+.informacion{				
+	color: white;	
+	text-align: justify;
+	width: 40%;
+	height: 100%;
+	padding: 0 10px  0 30px;
+	display: inline-flex;
+	align-items: center;
+	position: relative;								
+}
+
+#nombre{
+	text-align: center;
+	font-family: 'El Messiri', sans-serif;
+}
+
+.marcoContenido{	
+	padding-top: 35px;
+}
+
+.marcoContenido p{
+	font-size: 2.4vh;
+}
+
+.foto{
+	background-image: url(../images/perfil/foto.jpg);
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-shadow: inset 0 0 20px 9px #45637b;
+	border-radius: 10px;
+	opacity: .5;
+	height: 100%;
+	width: 60%;
+	position: relative;
+	z-index: 101;
+}
+.capaSuperior{
+	background-color: rgba(181,181,162,.2);
+	position: absolute;
+	text-align: center;
+	color: white;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	padding: 20px;
+	top: 0;
+}
+
+.infContenido{
+	width: 40%;
+	font-family: 'Merienda One', cursive;
+	text-align: justify;
+	margin: 0 3vw;
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+	z-index: 200;
+
+}			
+
+.capaSuperior:hover{				
+	opacity: 0;	
+	z-index: 0;						
+}
+
+.informacion:hover{
+	z-index: 110
+}
+.infContenido:hover{
+	background-color: black;
+}
+
+@media only screen and (max-width:1024px){
+	.tituloCabecera{
+		width: 60%;
+		float: right;
+	}
+}
+@media only screen and (max-width:768px){
+	.marcoContenido{				
+		width: 100%;	    
+	    padding-right: 5px;			    
+	    overflow: hidden;
+	}
+
+	.marcoContenido p{									
+		padding-right: 15px;
+		padding-left: 5px;
+		font-size: 15px;
+	}
+	.capaSuperior{
+		display: none;
+	}				
+	.informacion{
+		width: 100%;
+		z-index: 100;
+		align-items: flex-end;
+	}
+	.foto{
+		width: 100%;
+		position: absolute;
+		opacity: .7;					
+	}
+	.foto:hover{
+		z-index: 99;
+	}
+	.marcoContenido p:hover{
+		background-color: rgba(1,43,88,.3);
+		border-radius: 5px;
+	}
+}
+@media only screen and (max-width:375px){
+	.marcoContenido{
+		height: 100vh;
+		overflow: scroll;
+	}
+}

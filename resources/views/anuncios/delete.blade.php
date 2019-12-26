@@ -2,7 +2,7 @@
 @section('titulo','Eliminar anuncio')
       
 @section('contenido')
-    <h3>{{"Titulo: $anuncio->titulo   -Precio: $anuncio->precio"}}€</h3>      
+    <h3>{{"Titulo: $anuncio->titulo"}}<br>{{"Precio: $anuncio->precio"}}€</h3>      
     
     <form class="my-2 border p-5" method="POST" action="{{URL::temporarySignedRoute('anuncios.destroy',now()->addMinutes(1),$anuncio->id)}}">
     {{csrf_field()}}
