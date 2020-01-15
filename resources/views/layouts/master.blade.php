@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Aplicacion de gestion de motos Larabikes">
+        <meta name="description" content="Aplicacion tablon de anuncios">
         <title>{{config('app.name')}} -@yield('titulo')</title>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">    

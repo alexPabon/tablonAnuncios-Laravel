@@ -61,7 +61,7 @@ class AnuncioController extends Controller
             $ruta= $request->file('imagen')->store(config('filesystems.anunciosImageDir'));  //guardarla
             $imagen=pathinfo($ruta,PATHINFO_BASENAME);
         }
-            
+//             dd($imagen, $ruta);
             //creacion y guardado de la nueva moto con todos los datos POST
             $anuncio=Anuncio::create($request->except('imagen')+['imagen'=>$imagen]+['user_id'=>$idUser]);             
             
