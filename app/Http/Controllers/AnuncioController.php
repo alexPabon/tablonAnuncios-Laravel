@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StoreAnuncio;
 use App\Anuncio;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Storage;
 use App\Policies\AnuncioPolicy;
 
@@ -170,7 +171,8 @@ class AnuncioController extends Controller
     
     public function lomio(){
         
-        $id=auth()->user()->id;
+        
+        $id=auth()->user()->id;        
         $anuncios = Anuncio::where('user_id',$id)->orderBy('id','DESC')->paginate(10);
         $total = Anuncio::where('user_id',$id)->count();
         

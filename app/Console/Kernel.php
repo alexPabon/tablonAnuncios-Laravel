@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\EnviarEmails;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -13,7 +14,9 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        
+        EnviarEmails::class,
+        
     ];
 
     /**
@@ -26,6 +29,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+        $schedule->command('colaEmail:enviar')->everyMinute();
     }
 
     /**

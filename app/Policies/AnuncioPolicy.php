@@ -72,4 +72,11 @@ class AnuncioPolicy
     {
         //
     }
+    
+    
+    public function mantenimiento(User $user)
+    {
+        //condicion para poder editar anuncio
+        return $user->email=='admin@bcn.cat';
+    }
 }

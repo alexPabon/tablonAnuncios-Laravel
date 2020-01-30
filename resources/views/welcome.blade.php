@@ -7,7 +7,10 @@
 
 @section('contenido')
 <div class="portada">
-	<p class="text-justify">
+	<h4 class="h4">
+		<strong>Aplicacion creada con Laravel (Framework PHP)</strong>
+	</h4>
+	<p class="text-justify lead">
 	    Esta aplicación consiste en publicar nuestros anuncios ofreciendo los artículos
 	    que no  usemos a un precio razonable para que otras personas puedan alargar la vida
 	    de estos productos y así fomentemos el consumo responsable, creando una nueva forma
