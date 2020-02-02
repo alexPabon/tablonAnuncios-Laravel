@@ -3,7 +3,7 @@
 
     @section('contenido') 
         <div>
-			<p>Ultima Actualizacion: {{$anuncio->updated_at}}</p>			
+			<p>Ultima Actualizacion: {{$anuncio->updated_at->format('d/m/Y')}}</p>			
 			<h3><b>{{ucfirst($anuncio->titulo)}}</b></h3>
 			<p><b>Precio: </b>{{e($anuncio->precio)}}€</p>
 			{{-- Para escribir un texto con saltos de linea debe usar'{!! nl2br() !!}'

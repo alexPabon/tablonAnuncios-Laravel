@@ -2,7 +2,7 @@
 <div class="contenedor">
 	<a href="{{route('anuncios.show',$anuncio->id).$pagina}}" style="text-decoration: none">
 		<div class="contenido">
-			<p>Publicado: {{$anuncio->created_at}}</p>
+			<p>Publicado: {{$anuncio->created_at->format('d/m/Y')}}</p>
 			<h3><b>{{ucfirst($anuncio->titulo)}}</b></h3>
 			<p><b>Precio: </b>{{$anuncio->precio}}€</p>
 			<div class="imagenes">
