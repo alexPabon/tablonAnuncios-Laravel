@@ -22,7 +22,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('anuncios','AnuncioController');
-Route::resource('mensajes','messagesController');
+Route::resource('mensajes','MessagesController');
 Route::get('anuncios/delete/{anuncio}','AnuncioController@delete')->name('anuncios.delete')->middleware('throttle:3,1');
 
 //para ver mis anuncios
