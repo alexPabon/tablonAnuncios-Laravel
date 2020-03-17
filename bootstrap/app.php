@@ -42,6 +42,16 @@ $app->singleton(
 );
 
 /*
+ |
+ |Es necesario para guardar la imagenes en
+ |la carpeta public_html del dominio
+ |
+ */
+// $app->bind('path.public', function(){
+//     return base_path()."/../public_html/alexpabon.es";
+// });
+
+/*
 |--------------------------------------------------------------------------
 | Return The Application
 |--------------------------------------------------------------------------

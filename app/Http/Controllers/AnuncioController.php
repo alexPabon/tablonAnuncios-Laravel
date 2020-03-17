@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Storage;
 use App\Policies\AnuncioPolicy;
 
+use App\Traits\AddressIp;
+
 
 
 class AnuncioController extends Controller
@@ -27,8 +29,11 @@ class AnuncioController extends Controller
      */
     public function index()
     {
+        //guarda la direccion Ip del cliente
+        AddressIp::guardarIp();
+        
         $anuncios = Anuncio::orderBy('updated_at','DESC')->paginate(12);
-        $total = Anuncio::count();
+        $total = Anuncio::count();       
         
         return view('anuncios.list')->with(['anuncios'=>$anuncios,'total'=>$total]);
     }

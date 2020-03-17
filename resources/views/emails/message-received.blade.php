@@ -14,7 +14,7 @@
 		Asunto: {{$mensaje['asunto']}}		
 	</p>
 	<p>
-		Mensaje:<br>{{$mensaje['mensaje']}}
+		Mensaje:<br>{{nl2br($mensaje['mensaje'])}}
 	</p>
 </body>
 </html>

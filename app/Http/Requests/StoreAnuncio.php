@@ -27,7 +27,8 @@ class StoreAnuncio extends FormRequest
             'titulo'=>'required|min:3|max:255',
             'descripcion'=>'required|min:10|max:500',
             'precio'=>'required|numeric|min:0',
-            'imagen'=>'nullable|file|image|mimes:jpg,jpeg,png,gif,webp|max:2048'
+           // 'imagen'=>'nullable|file|image|mimes:jpg,jpeg,png,gif,webp|max:2048'
+            'imagen'=>'',
         ];
     }
     

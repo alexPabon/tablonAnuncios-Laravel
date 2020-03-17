@@ -56,7 +56,7 @@ $(document).ready(function()
 
             //La propiedad FileReader.onload contiene un controlador de evento ejecutado cuando load es ejecutado
             reader.onload = function(e){
-
+                
                 if(flag && idEntrada=='user-img-file')
                     nuevaImagen.attr('src', e.target.result);
                 else if(flag && idEntrada=='user-img-file1')
