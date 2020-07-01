@@ -21,7 +21,7 @@
 
         <!-- CSS de Bootstrap y Laravel -->
         <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">        
-        <link rel="stylesheet" type="text/css" href="{{asset('css/anuncios.css')}}"> 
+        <link rel="stylesheet" type="text/css" href="{{asset('css/anuncios.css?version=1.0')}}"> 
         <link rel="stylesheet" type="text/css" href="{{asset('css/cabecera.css')}}"> 
         <link href="https://fonts.googleapis.com/css?family=Merienda+One&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Courgette|El+Messiri&display=swap" rel="stylesheet">       
@@ -39,7 +39,7 @@
            <div class="p-1 bg-dark"></div>
        @endif
 @show
-<div class="container p-3 bg-light">	
+<div class="container p-3 ">	
     <!-- PARTE CENTRAL -->
     <h1 class="my-2 text-center">
     	<strong>Vende todo lo que quieras</strong>

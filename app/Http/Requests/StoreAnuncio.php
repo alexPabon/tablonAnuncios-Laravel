@@ -27,8 +27,7 @@ class StoreAnuncio extends FormRequest
             'titulo'=>'required|min:3|max:255',
             'descripcion'=>'required|min:10|max:500',
             'precio'=>'required|numeric|min:0',
-           // 'imagen'=>'nullable|file|image|mimes:jpg,jpeg,png,gif,webp|max:2048'
-            'imagen'=>'',
+            'imagen'=>'nullable|file|image|mimes:jpg,jpeg,png,webp|max:2048'           
         ];
     }
     
@@ -46,7 +45,7 @@ class StoreAnuncio extends FormRequest
             'precio.min'=>'El precio debe ser positivo',
             'precio.numeric'=>'El precio debe ser numerico',
             'imagen.max'=>'La imagen no puede se mayor que 2048 kilobytes',
-            'imagen.mimes'=>'La imagen debe de ser de tipo: jpg, jpeg, png, gif, webp',
+            'imagen.mimes'=>'La imagen debe de ser de tipo: jpg, jpeg, png,webp',
             'imagen.image'=> 'Debe ser una imagen',
         ];
     }

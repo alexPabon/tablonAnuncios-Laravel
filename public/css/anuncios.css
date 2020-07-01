@@ -2,6 +2,11 @@
 	box-sizing: border-box;
 }
 
+body{
+	background-image: url("../images/fondo/esferas.png");	
+	background-attachment: fixed;
+}
+
 .contGeneral{
 	padding: 5px;
     background: #6ebdc5;
@@ -56,6 +61,18 @@
 	display:none;
 }
 
+.imagen{
+	height: 100px;    
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#preguntas{background-image: url(/images/portales/preguntas.png);}
+#apirest{background-image: url(/images/portales/api.png);}
+#vermapa{background-image: url(/images/portales/vermapa.png);}
+
+
 .contPadre:hover{
 	background:#a4bce0;
 	box-shadow: inset 0 0 20px black;
@@ -89,8 +106,14 @@
   background: #6ebdc5;
 }
 
+@media only screen and (max-width: 425px){
+	.imagen{
+		height: 130px;
+	}
+}
+
 @media only screen and (max-width: 375px) {
 	.contPadre{
 		width:100%;
-	}
-	}
+	}	
+}

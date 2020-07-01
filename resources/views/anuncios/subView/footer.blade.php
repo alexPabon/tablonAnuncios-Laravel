@@ -1,9 +1,13 @@
 <!-- PARTE INFERIOR -->
 <footer class="page-footer font-small p-4 bg-dark text-white">
     <div class="border border-primary rounded">
-    	<h4 class="bg-secondary p-1">Otra web personal</h4>
-    	<a href="http://preguntas.alexpabon.es" target="_blank" class="view overlay zoom"><img src="/images/portales/preguntas.png" title="Ir a preguntas de programación" class="img-fluid rounded m-3 col-11 col-sm-3 col-lg-2"></a>
-    	<a href="http://apirest.alexpabon.es" target="_blank" class="view overlay zoom"><img src="/images/portales/api.png" title="Ir a Api rest" class="img-fluid rounded m-3 col-11 col-sm-3 col-lg-2"></a>		
+    	<h4 class="bg-secondary p-1">Otra web personal</h4>    	
+    	<a id="preguntas" href="http://preguntas.alexpabon.es" target="_blank" class="imagen d-inline-block bg-light rounded m-3 col-11 col-sm-3 col-lg-2"></a>
+    	<a id="apirest" href="http://apirest.alexpabon.es" target="_blank" class="imagen d-inline-block bg-light rounded m-3 col-11 col-sm-3 col-lg-2"></a>
+    	<a id="vermapa" href="http://vermapa.alexpabon.es" target="_blank" class="imagen d-inline-block bg-light rounded m-3 col-11 col-sm-3 col-lg-2"></a>    	
+		<a href="http://comentarios.alexpabon.es" target="_blank" class="imagen position-relative d-inline-block bg-light align-content-center align-items-center rounded m-3 col-11 col-sm-3 col-lg-2">
+			<span class="position-absolute w-100 text-center" style="top:40%; left:0">App Laravel Vue.js</span>
+		</a>
     </div>   
     <div class="my-3">
     	<h3>contacto:</h3>

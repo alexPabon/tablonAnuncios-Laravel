@@ -2,7 +2,7 @@
 @section('titulo','Crear anuncio')
  
 @section('contenido')
-    <form class="my-2 border p-5" method="post" action="{{route('anuncios.store')}}" enctype="multipart/form-data">
+    <form class="my-2 border p-5 bg-light" method="post" action="{{route('anuncios.store')}}" enctype="multipart/form-data">
         {{csrf_field()}}        
         <div class="form-group row">
             <label for="inputTitulo" class="col-sm-2 col-form-label">Titulo</label>

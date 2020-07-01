@@ -2,7 +2,7 @@
 @section('titulo','Ver detalles del anuncio')
 
     @section('contenido') 
-        <div>
+        <div class="bg-light p-3">
 			<p>Ultima Actualizacion: {{$anuncio->updated_at->format('d/m/Y')}}</p>			
 			<h3><b>{{ucfirst($anuncio->titulo)}}</b></h3>
 			<p><b>Precio: </b>{{e($anuncio->precio)}}€</p>

@@ -2,7 +2,7 @@
 @section('titulo','Editar Anuncio')
 
 @section('contenido')
-	   <form class="my-2 border p-5" method="post" action="{{route('anuncios.update',$anuncio->id)}}" enctype="multipart/form-data">
+	   <form class="my-2 border p-5 bg-light" method="post" action="{{route('anuncios.update',$anuncio->id)}}" enctype="multipart/form-data">
         {{csrf_field()}}
         <input name="_method"  type="hidden" value="PUT">
                 

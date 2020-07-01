@@ -44,8 +44,8 @@ class EnviarEmails extends Command
         //exec('php artisan queue:work --stop-when-empty');
         //Artisan::call('queue:work',['--timeout'=>'1']);
         //Artisan::call('queue:work');
-        //Artisan::call('queue:restart');
-        Artisan::call('queue:listen');
+        Artisan::call('queue:restart');
+        //Artisan::call('queue:listen');
         
     }
 }
